@@ -3,7 +3,7 @@
 def binarySearch(arr, value):
     """
     Returns the index position of the target element if found
-    Returns -1 if target not in array
+    Returns -1 if target is not in array
     """
     start = 0
     end = len(arr)-1
