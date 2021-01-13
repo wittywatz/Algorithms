@@ -5,16 +5,15 @@ class MaxStack():
     
     def push(self,element):
         """
-        Adds element into stack and tracks the mimimum element in the stack
+        Adds element into stack and tracks the maximum element in the stack
         """
         self.stack.append(element)
         
         if self.maxx == []:
             self.maxx.append(element)
         else:
-            #GreaterThan or equalTo caters for a repetition of minimum element.
-            #This would ensure that the minimum element is always retrieved
-            # Eg [3,2,1,4,1]
+            #LessThan or equalTo caters for a repetition of maximum element.
+            #This would ensure that the maximum element is always retrieved
             if self.maxx[-1] <= element:
                 self.maxx.append(element)  
                 
@@ -39,7 +38,7 @@ class MaxStack():
     
     def max_stack(self):
         """
-        Returns the minimum element in the stack
+        Returns the maximum element in the stack
         """
         if self.maxx == []:
             return None
