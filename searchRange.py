@@ -37,7 +37,7 @@ class SolutionSearchRange():
             return -1
         else:
             i = left
-            while arr[left] == arr[i-1]:
+            while i>0 and arr[left] == arr[i-1]:
                 i-=1
             return i    
     
@@ -50,7 +50,7 @@ class SolutionSearchRange():
             return -1
         else:
             i = right
-            while arr[right] == arr[i+1]:
+            while i<len(arr)-1 and arr[right] == arr[i+1]:
                 i+=1
             return i
     
