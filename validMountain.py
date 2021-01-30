@@ -1,4 +1,7 @@
 def validMountainArray(arr):
+        '''
+        Returns true if the array is a valid mountain
+        '''
         
         if (len(arr)<3):
             return False
