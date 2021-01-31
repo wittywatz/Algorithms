@@ -3,7 +3,11 @@
 Created on Fri Jan  8 00:23:08 2021
 
 @author: witty
+
+Would be updated to cater for leetcodes test cases
 """
+
+
 
 def longestSubStringLength(st):
     str_longest = ""
