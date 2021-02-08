@@ -17,12 +17,10 @@ const mergeSortedArrays = (array1, array2) => {
 //       return mergedArray;
 //     }   //May never get to this line of code
     if (!array1[i]) {
-      const remaining = array2.slice(j);
-      return [...mergedArray, ...remaining];
+      return [...mergedArray, ...array2.slice(j)];
     }
     if (!array2[j]) {
-      const remaining = array1.slice(i);
-      return [...mergedArray, ...remaining];
+      return [...mergedArray, ...array1.slice(i)];
     }
     if (array1[i] <= array2[j]) {
       mergedArray.push(array1[i]);
