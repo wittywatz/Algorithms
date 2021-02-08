@@ -1,12 +1,10 @@
 //Given two sorted arrays, merge them in sorted order.
-
-arr1 = [1, 3, 6, 25];
-arr2 = [2, 4, 6, 30];
-
 const mergeSortedArrays = (array1, array2) => {
+  //Arrays must be Sorted
   const mergedArray = [];
   let i = 0;
   let j = 0;
+  //Assumes that two arrays would be passed and must be sorted
   if (array1.length == 0) {
     return array2;
   }
@@ -15,17 +13,15 @@ const mergeSortedArrays = (array1, array2) => {
   }
 
   while (array1 || array2) {
-    if (!array1[i] && !array2[j]) {
-      return mergedArray;
-    }
+//     if (!array1[i] && !array2[j]) {
+//       return mergedArray;
+//     }   //May never get to this line of code
     if (!array1[i]) {
       const remaining = array2.slice(j);
-      console.log('Array1 is undefined', remaining);
       return [...mergedArray, ...remaining];
     }
     if (!array2[j]) {
       const remaining = array1.slice(i);
-      console.log('Array2 is empty', remaining);
       return [...mergedArray, ...remaining];
     }
     if (array1[i] <= array2[j]) {
@@ -38,6 +34,6 @@ const mergeSortedArrays = (array1, array2) => {
   }
   return mergedArray;
 };
-console.log(
-  mergeSortedArrays([1, 3, 6, 25, 30, 30, 31, 35, 38, 40], [2, 4, 30, 30])
-);
+// console.log(
+//   mergeSortedArrays([1, 3, 6, 25, 30, 30, 31, 35, 38, 40], [2, 4, 30, 30])
+// );
