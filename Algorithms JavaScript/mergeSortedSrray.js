@@ -32,6 +32,3 @@ const mergeSortedArrays = (array1, array2) => {
   }
   return mergedArray;
 };
-// console.log(
-//   mergeSortedArrays([1, 3, 6, 25, 30, 30, 31, 35, 38, 40], [2, 4, 30, 30])
-// );
