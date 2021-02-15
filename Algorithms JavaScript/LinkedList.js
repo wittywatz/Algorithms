@@ -11,14 +11,14 @@ class LinkedList {
     this.tail = this.head;
     this.length = 1
   }
-  append = (value) => {
+  append(value){
     const newNode = new Node(value)
     this.tail.next = newNode
     this.tail=newNode
     this.length++
     return this
   }
-  prepend = (value) => {
+  prepend(value){
     const newNode = new Node(value)
 
     newNode.next = this.head
@@ -26,7 +26,7 @@ class LinkedList {
     this.length++
     return this
   }
-  printListItems=()=>{
+  printListItems(){
     const array = [];
     let currentnode = this.head;
     while(currentnode !== null){
