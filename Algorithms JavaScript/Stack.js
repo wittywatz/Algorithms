@@ -15,7 +15,7 @@ class Stack{
     if (!this.top){
       return null;
     }
-    return this.head.value
+    return this.head && this.head.value
   }
   pop(){
     if (this.length===0){
