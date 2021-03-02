@@ -1,7 +1,7 @@
 #Binary Search algorithm only works on sorted arrays.
 """
 Created on Tue Jan  5 20:22:40 2021
-@author: watson
+
 """
 
 def binarySearch(arr, value):
