@@ -10,8 +10,6 @@ def twoSum(arr,target):
     
     Returns a list of indexes which sum up to the target or [] if otherwise
     """
-    if len(arr)<2:
-        return []
     store = {}
     for index,value in enumerate(arr):
         difference = target-value
