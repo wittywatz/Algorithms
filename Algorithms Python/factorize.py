@@ -23,7 +23,7 @@ def primeFactors(n):
   Finds all prime factors when given an integer value.
   '''
   try:
-    if(n.is_integer()):
+    if(type(n) == float and n.is_integer()):
       n = int(n)
     assert type(n) == type(1) 
     if n<=1:
@@ -60,4 +60,4 @@ def primeFactors(n):
     print('An error occurred')
   
 
-primeFactors(2825.0000)
+primeFactors(2.00000)
