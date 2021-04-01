@@ -1,5 +1,5 @@
 class Heap:
-    def __init__(self,heapSize):
+    def __init__(self,heapSize=10):
         assert type(heapSize) == int
         self.HEAP_SIZE = heapSize
         self.heap = [0]*heapSize
