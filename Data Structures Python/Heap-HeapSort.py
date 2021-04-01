@@ -42,8 +42,10 @@ class Heap:
     
                     
     def heapsort(self):
+        temp = self.heap[:]
         for i in range(self.currentPosition+1):
             print(self.heap[0], end=' ')
             self.heap[0],self.heap[self.currentPosition-i] = self.heap[self.currentPosition-i],self.heap[0]
             self._reOrderDownwards(0,self.currentPosition-i-1)
+        self.heap = temp
         
