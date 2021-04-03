@@ -1,10 +1,8 @@
 def countTriplets(arr, r):
-    # Array has to be sorted
-    array = sorted(arr)
     result = 0
     firstMultiple = {}
     secondMultiple = {}
-    for i in array:
+    for i in arr:
         if i in secondMultiple:
             result += secondMultiple[i]
         if i in firstMultiple:
