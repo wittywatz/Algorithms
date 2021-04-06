@@ -1,14 +1,14 @@
 //Code goes here
-const firstRecurringElement = (arr) =>{
+const firstRecurringElement = (arr) => {
   let seen = {};
-  for (let i=0;i<arr.length; i++){
-    if(seen[arr[i]]){
+  for (let i = 0; i < arr.length; i++) {
+    if (seen[arr[i]]) {
       return arr[i];
     }
-    seen[arr[i]]= true;
+    seen[arr[i]] = true;
   }
-  return;
-}
+  return null;
+};
 
-const result = firstRecurringElement([1,2,3,4])
-console.log(result)
+const result = firstRecurringElement([1, 2, 3, 4, 1]);
+console.log(result);
