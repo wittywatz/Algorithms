@@ -21,9 +21,7 @@ function TrappingWater(arr) {
       right--;
     }
   }
-  // code goes here
   return total;
 }
 
-// keep this function call here
 console.log(TrappingWater(readline()));
