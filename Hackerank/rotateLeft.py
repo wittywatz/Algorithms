@@ -12,70 +12,90 @@ def rotLeft(a, d):
 
 
 
-#!/bin/python3
+# #!/bin/python3
 
-import math
-import os
-import random
-import re
-import sys
+# import math
+# import os
+# import random
+# import re
+# import sys
 
 
 
-#
-# Complete the 'partitionArray' function below.
-#
-# The function is expected to return a STRING.
-# The function accepts following parameters:
-#  1. INTEGER k
-#  2. INTEGER_ARRAY numbers
-#
+# #
+# # Complete the 'partitionArray' function below.
+# #
+# # The function is expected to return a STRING.
+# # The function accepts following parameters:
+# #  1. INTEGER k
+# #  2. INTEGER_ARRAY numbers
+# #
 
-def helper(arr1, arr2):
-    dd = {}
-    for val in arr1:
-        dd[val] = True
-    for val2 in arr2:
-        if val2 in dd:
-            return False
-    return True
+# def helper(arr1, arr2):
+#     dd = {}
+#     for val in arr1:
+#         dd[val] = True
+#     for val2 in arr2:
+#         if val2 in dd:
+#             return False
+#     return True
 
-def partitionArray(k, numbers):
-    # Write your code here
-    print(k)
-    print(numbers)
-    count = 0
+# def partitionArray(k, numbers):
+#     # Write your code here
+#     print(k)
+#     print(numbers)
+#     count = 0
     
-    # number_set = list(set(numbers))
-    # print(number_set)
-    # len_numbers = len(number_set)
-    # possible = len_numbers//k
-    # print(possible)
+#     # number_set = list(set(numbers))
+#     # print(number_set)
+#     # len_numbers = len(number_set)
+#     # possible = len_numbers//k
+#     # print(possible)
     
     
-    for i in range(0,len(numbers),k):
-        temp = numbers[i:i+k]
-        print('temp',temp)
-        if len(temp) == len(set(temp)):
-            count +=1
-    print(count)
-    return 'Yes' if count>=k else 'No'
+#     for i in range(0,len(numbers),k):
+#         temp = numbers[i:i+k]
+#         print('temp',temp)
+#         if len(temp) == len(set(temp)):
+#             count +=1
+#     print(count)
+#     return 'Yes' if count>=k else 'No'
         
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+# if __name__ == '__main__':
+#     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    k = int(input().strip())
+#     k = int(input().strip())
 
-    numbers_count = int(input().strip())
+#     numbers_count = int(input().strip())
 
-    numbers = []
+#     numbers = []
 
-    for _ in range(numbers_count):
-        numbers_item = int(input().strip())
-        numbers.append(numbers_item)
+#     for _ in range(numbers_count):
+#         numbers_item = int(input().strip())
+#         numbers.append(numbers_item)
 
-    result = partitionArray(k, numbers)
+#     result = partitionArray(k, numbers)
 
-    fptr.write(result + '\n')
+#     fptr.write(result + '\n')
 
-    fptr.close()
+#     fptr.close()
+
+
+
+
+# # read the string filename
+# filename = input()
+# count = 0
+# bytesSum = 0
+# with open( filename ) as f:
+#     lines = f.readlines()
+#     for line in lines:
+#         bytes = int(line.strip().split(' ')[-1])
+#         if (bytes>5000):
+#             count+=1
+#             bytesSum += bytes
+#     # print(count)
+#     # print(bytesSum)
+# new_name = 'bytes_'+filename
+# with open( new_name, "w") as fi:
+#     fi.write('{}\n{}\n'.format(str(count),str(bytesSum)))
